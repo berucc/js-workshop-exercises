@@ -39,7 +39,45 @@ CODING SESSION: EVENT BUBBLING
 		</div>
 
 		<script>
-			// implement code here
+			const button = document.querySelector('button')
+
+			const elementAndAllParents = getElementAndAllParentElements(button)
+
+			printElementHierarchy(elementAndAllParents)
+			addClickHandlersToAllElements(elementAndAllParents)
+
+			function getElementAndAllParentElements(element) {
+				let parents = [element]
+				while (element.parentElement) {
+					parents.push(element.parentElement)
+					element = element.parentElement
+				}
+				return parents
+			}
+
+			function printElementHierarchy(elements) {
+				const elementHierarchy = elements
+					.reverse()
+					.reduce(reduceElementNamesToString, '')
+				console.log('Element hierarchy:', elementHierarchy)
+			}
+
+			function reduceElementNamesToString(prev, current, index) {
+				const separator = index === 0 ? '' : ' > '
+				return `${prev}${separator}${current.tagName}`
+			}
+
+			function addClickHandlersToAllElements(elements) {
+				elements.forEach((e) => e.addEventListener('click', handleClick))
+			}
+
+			function handleClick(event) {
+				const didElementTriggeredTheEvent = event.currentTarget === event.target
+				const emoji = didElementTriggeredTheEvent ? '🎯' : '🫧'
+				console.log(
+					`${emoji} An element was clicked: ${event.currentTarget.tagName}`
+				)
+			}
 		</script>
 	</body>
 </html>
