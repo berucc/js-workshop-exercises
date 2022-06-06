@@ -1,0 +1,29 @@
+{
+	"name": "coding-exercises",
+	"version": "1.0.0",
+	"description": "Coding exercises for the Practical JS workshop.",
+	"author": "Benjamin Rupp <benjamin.rupp@codecentric.de>",
+	"private": true,
+	"main": "index.js",
+	"scripts": {
+		"test": "jest"
+	},
+	"license": "ISC",
+	"devDependencies": {
+		"flush-promises": "^1.0.2",
+		"jest": "^28.1.0",
+		"jest-when": "^3.5.1"
+	},
+	"prettier": {
+		"trailingComma": "es5",
+		"semi": false,
+		"singleQuote": true,
+		"useTabs": true
+	},
+	"jest": {
+		"clearMocks": true
+	},
+	"dependencies": {
+		"axios": "^0.27.2"
+	}
+}

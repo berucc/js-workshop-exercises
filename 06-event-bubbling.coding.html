@@ -1,0 +1,45 @@
+<!--
+CODING SESSION: EVENT BUBBLING
+
+1. Recap
+    Write a function that prints the hierarchy of the button and all its parent elements.
+
+    Example output:
+    Element hierarchy: HTML > BODY > DIV > BUTTON
+
+2. Visualize Event Bubbling
+    Write a function that adds an event handler for the 'click' event to the button and all
+    of its parent elements. The event handler should print the element tag name and an information
+    whether the element has triggered the event or is part of the bubble chain.
+
+    Example output:
+    🎯 An element was clicked: BUTTON
+    🫧 An element was clicked: DIV
+    🫧 An element was clicked: BODY
+    🫧 An element was clicked: HTML
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Coding Session: Event Bubbling 🫧</title>
+		<link rel="icon" type="text/plain" href="data:text/plain" />
+		<style>
+			div {
+				border: 4px solid lightgrey;
+				background-color: #eee;
+				padding: 2rem;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Coding Session: Event Bubbling 🫧</h1>
+		<div>
+			<button>click me</button>
+		</div>
+
+		<script>
+			// implement code here
+		</script>
+	</body>
+</html>
